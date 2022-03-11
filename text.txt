@@ -1,0 +1,19 @@
+bugs found in the game: 
+
+alerting the console 4 times after victor
+
+
+
+
+
+//Things to do: 
+set life mark 
+score board; 
+
+
+
+
+
+//end game: 
+
+redesign the UI 
