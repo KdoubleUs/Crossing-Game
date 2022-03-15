@@ -1,16 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&display=swap");
 * {
   margin: 0;
   padding: 0;
+  font-family: "Orbitron", sans-serif;
 }
 body {
   height: 100vh;
   width: 100%;
   background-color: lightgray;
 }
-
+.title {
+  text-align: center;
+  font-weight: 800;
+}
 .game-container {
   position: relative;
-  left: 20%;
+  left: 50%;
+  transform: translateX(-50%);
   width: 50em;
   height: 40em;
   border-style: solid;
@@ -29,12 +35,9 @@ body {
   border-style: solid;
 } */
 
-#title {
-  text-align: center;
-}
 .ball {
   position: absolute;
-  z-index: 10;
+  z-index: 9;
   width: 20px;
   height: 20px;
   background-color: goldenrod;
@@ -60,22 +63,22 @@ body {
 }
 #b1 {
   width: 120px;
-  /* animation: block 2s infinite linear; */
+  animation: block 1s infinite linear;
 }
 #b2 {
   /* background-image: url("./game-images/space-invaders.png"); */
   width: 160px;
-  /* animation: block 2s infinite linear; */
+  animation: block 1s infinite linear;
 }
 #b3 {
   width: 170px;
-  /* animation: block 4s infinite linear; */
+  animation: block 2s infinite linear;
 }
 #b4 {
   width: 160px;
   padding: 0;
   margin-right: 0;
-  /* animation: block 5s infinite linear; */
+  animation: block 3s infinite linear;
 }
 
 .safe {
@@ -83,4 +86,88 @@ body {
   width: 100%;
   height: 50px;
   background-color: green;
+}
+#startButton {
+  margin-left: 10px;
+  font-size: 20px;
+  padding: 0.8em;
+}
+#reset {
+  font-size: 20px;
+  padding: 0.8em;
+  margin-left: 10px;
+}
+.scoreBoard {
+  margin-left: 10px;
+}
+
+/* creating the start menu*/
+.game-container {
+  display: none;
+}
+.start {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50em;
+  height: 40em;
+  border-style: solid;
+  overflow: hidden;
+  z-index: 10;
+  background-color: rgb(37, 36, 36);
+}
+
+/* #startBtn {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+  cursor: pointer;
+  -webkit-animation: 2s linear infinite condemned_blink_effect; 
+  animation: 2s linear infinite condemned_blink_effect;
+} */
+#startBtn {
+  position: relative;
+  text-align: center;
+  top: 50%;
+  cursor: pointer;
+  text-decoration: blink;
+  /* -webkit-animation: 2s linear infinite condemned_blink_effect; for Safari 4.0 - 8.0 */
+  /* animation: 2s linear infinite condemned_blink_effect; */
+  animation: 2s linear infinite fade;
+  /* transition: all 10s ease-in-out; */
+  color: yellow;
+}
+
+/* @keyframes condemned_blink_effect {
+  0% {
+    visibility: hidden;
+    transition: all 10s ease-in-out;
+  }
+  50% {
+    visibility: hidden;
+    transition: all 10s ease-in-out;
+  }
+  100% {
+    visibility: visible;
+    transition: all 10s ease-in-out;
+  }
+} */
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.25;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
 }

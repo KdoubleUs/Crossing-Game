@@ -11,6 +11,14 @@
     <h1 class="title">Cross the street</h1>
   </header>
   <body>
+    <!-- <div class="start" id="startScreen" style="display: block">
+      <button id="startButton">Start Game</button>
+    </div> -->
+    <div class="start" id="startScreen">
+      <!-- <button id="startBtn">Start Game</button> -->
+      <h1 id="startBtn">Start the Game</h1>
+    </div>
+
     <main>
       <div class="game-container">
         <div class="safe"></div>
@@ -21,8 +29,31 @@
         <div class="ball"></div>
       </div>
     </main>
-    <h1 class="life">Life Remaining: <b>3</b></h1>
-    <footer></footer>
+    <div class="scoreBoard">
+      <h1 class="life">Life Remaining:</h1>
+      <img
+        class="heart"
+        id="heart1"
+        src="./game-images/heart4.png"
+        height="50"
+        width="50"
+      />
+      <img
+        class="heart"
+        id="heart2"
+        src="./game-images/heart4.png"
+        height="50"
+        width="50"
+      />
+      <img
+        class="heart"
+        id="heart3"
+        src="./game-images/heart4.png"
+        height="50"
+        width="50"
+      />
+    </div>
+    <footer><button id="reset">Restart the Game</button></footer>
     <script src="./script.js"></script>
   </body>
 </html>
