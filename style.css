@@ -22,18 +22,6 @@ body {
   border-style: solid;
   overflow: hidden;
 }
-/* 
-.line {
-  position: relative;
-  border-style: solid;
-  width: 10em;
-}
-.line2 {
-  position: inherit;
-  transform: rotate(90deg);
-  width: 20em;
-  border-style: solid;
-} */
 
 .ball {
   position: absolute;
@@ -47,7 +35,7 @@ body {
 }
 
 .block {
-  position: relative; /*must */
+  position: relative;
   width: 80px;
   height: 40px;
   background-color: black;
@@ -66,7 +54,6 @@ body {
   animation: block 1s infinite linear;
 }
 #b2 {
-  /* background-image: url("./game-images/space-invaders.png"); */
   width: 160px;
   animation: block 1s infinite linear;
 }
@@ -117,42 +104,15 @@ body {
   background-color: rgb(37, 36, 36);
 }
 
-/* #startBtn {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 50%;
-  cursor: pointer;
-  -webkit-animation: 2s linear infinite condemned_blink_effect; 
-  animation: 2s linear infinite condemned_blink_effect;
-} */
 #startBtn {
   position: relative;
   text-align: center;
   top: 50%;
   cursor: pointer;
   text-decoration: blink;
-  /* -webkit-animation: 2s linear infinite condemned_blink_effect; for Safari 4.0 - 8.0 */
-  /* animation: 2s linear infinite condemned_blink_effect; */
   animation: 2s linear infinite fade;
-  /* transition: all 10s ease-in-out; */
   color: yellow;
 }
-
-/* @keyframes condemned_blink_effect {
-  0% {
-    visibility: hidden;
-    transition: all 10s ease-in-out;
-  }
-  50% {
-    visibility: hidden;
-    transition: all 10s ease-in-out;
-  }
-  100% {
-    visibility: visible;
-    transition: all 10s ease-in-out;
-  }
-} */
 
 @keyframes fade {
   0% {
