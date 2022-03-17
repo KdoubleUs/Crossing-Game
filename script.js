@@ -6,7 +6,6 @@ window.addEventListener("load", () => {
 });
 
 window.addEventListener("keydown", function (e) {
-  // e.preventDefault();
   switch (e.key) {
     case "ArrowLeft":
       ball.style.left = parseInt(ball.style.left) - movePosition + "px";
@@ -41,13 +40,10 @@ let block1 = document.getElementById("b4").getBoundingClientRect();
 
 //checking for collision
 let testBlock = document.querySelectorAll(".block");
-// let safeZone = document.querySelector(".safe");
-// let yellowBall = ball.getBoundingClientRect();
 
 function checkCollision() {
   let hearts = document.querySelector(".heart");
   let yellowBall = ball.getBoundingClientRect();
-  // let safeArena = safeZone.getBoundingClientRect();
 
   testBlock.forEach(testBlock => {
     let blocky = testBlock.getBoundingClientRect();
