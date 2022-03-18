@@ -1,5 +1,7 @@
 let ball = document.querySelector(".ball");
+let score = 0;
 movePosition = 50;
+
 window.addEventListener("load", () => {
   ball.style.left = 0;
   ball.style.bottom = 0;
@@ -88,8 +90,10 @@ function safeBlock() {
     safeArena.y < yellowBalls.y + yellowBalls.height &&
     safeArena.height + safeArena.y > yellowBalls.y
   ) {
-    console.log(`you are safe`);
+    score += 25;
+    document.querySelector(".score").innerText = `Score: ${score}`;
     alert(`Congratulation you are safe`);
+    checkWin();
     resetPosition();
   }
 }
@@ -106,7 +110,13 @@ function checkLoser() {
     alert(`you lost. Restart the game!`);
   }
 }
-
+//check for win
+function checkWin() {
+  let point = document.querySelector(".score").innerText;
+  if (point == "Score: 100") {
+    winningMenu();
+  }
+}
 //reset the game from the button
 let restart = document.getElementById("reset");
 restart.addEventListener("click", () => {
@@ -121,3 +131,13 @@ startGame.addEventListener("click", function () {
   let startMenu = document.querySelector(".start");
   startMenu.style.display = "none";
 });
+
+//Winning Menu
+function winningMenu() {
+  let winningMenu = document.querySelector(".start");
+  winningMenu.style.display = "block";
+  let winText = document.querySelector("#startBtn");
+  winText.innerText = "Victory";
+  winText.style.animation = "2s infinite grow";
+  winText.style.transition = "ease-in-out";
+}
