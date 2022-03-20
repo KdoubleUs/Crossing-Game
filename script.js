@@ -55,23 +55,7 @@ function checkCollision() {
       blocky.y < yellowBall.y + yellowBall.height &&
       blocky.height + blocky.y > yellowBall.y
     ) {
-      console.log(blocky.x);
-      console.log(blocky.y);
-      console.log(blocky.height);
-      console.log(blocky.width);
-      console.log(blocky.left);
-      console.log(blocky.right);
-
-      console.log(yellowBall.x);
-      console.log(yellowBall.y);
-      console.log(yellowBall.height);
-      console.log(yellowBall.width);
-      console.log(yellowBall.left);
-      console.log(yellowBall.right);
-
-      console.log(`collision occured`);
       hearts.remove();
-
       resetPosition();
     }
   });
