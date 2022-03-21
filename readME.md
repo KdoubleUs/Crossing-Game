@@ -15,7 +15,7 @@ none
 
 ### Installing
 
-Fork and clone the repository to your directory. Load the "Index2.HTML" files.
+Fork and clone the repository to your directory. Load the "Index.HTML" files.
 
 ### Executing program
 
